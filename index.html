@@ -3,39 +3,37 @@
   <head>
     <title>Maki's Seedlings</title>
     <link href="stylesheet.css" type="text/css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Raleway&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css?family=Indie+Flower|Raleway&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="main">
-        <div class="sidebar">
-            <div id="logo">
-                <img src="images/logo.png" width=90%/>
-            </div>
-            <div id="Home" class="button">Home</div>
-            <div id="Shop"class="button">Shop</div>
-            <div id="Care"class="button">Care and Guides</div>
-            <div id="Contact Us"class="button">Contact Us</div>
+      <div class="sidebar">
+        <div id="logo">
+          <img src="images/logo.png" width="90%" />
         </div>
-        <div class="title">
+        <div id="Home" class="button">Home</div>
+        <div id="Shop" class="button">Shop</div>
+        <div id="Care" class="button">Care and Guides</div>
+        <div id="Contact Us" class="button">Contact Us</div>
+      </div>
+      <div class="title">
         <h1 class="mainHead">Maki's Seedlings</h1>
         <h2 class="subHead">make your life green</h2>
+        <div class="checkout">
+          <h3 class="checkoutTitle">Basket</h3>
+          <div id="basketItems"></div>
+          <img
+            src="images/Basket logo.svg"
+            width="50px"
+            height="50px"
+            class="checkoutLogo"
+          />
         </div>
-        <div class="productGrid">
-            <div class="cardBack">
-                <div class="photoCont"><img src=""/></div>
-                <div class="descriptionCont">
-                    <h2 class="name"></h2>
-                    <h4 class="description"></h>
-                    <h3 class="price"></h>
-                </div>
-                <div class="cardBack">
-                        <div class="photoCont"><img src=""/></div>
-                        <div class="descriptionCont">
-                            <h3></h3>
-                            <h2 class="price"></h2>
-                        </div>
-            </div>
-        </div>
+      </div>
+      <div class="productGrid" id="grid"></div>
     </div>
   </body>
   <script src="script.js"></script>
