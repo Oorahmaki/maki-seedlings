@@ -1,11 +1,12 @@
 const grid = document.getElementById("grid");
-
+const checkoutTitle = document.getElementById("checkoutTitle");
+const basketItems = document.getElementById("basketItems");
 const plants = [
   {
     name: "Echeveria",
     description: "A beginner friendly succulent",
     image: "images/echeveria.jpg",
-    price: "3.50"
+    price: "4"
   },
   {
     name: "Sansevieria",
@@ -23,7 +24,7 @@ const plants = [
     name: "Peace Lily",
     description: "Shade tolerant and easy to care for",
     image: "images/peacelily.jpg",
-    price: "5"
+    price: "6"
   },
   {
     name: "Peperomia",
@@ -32,6 +33,8 @@ const plants = [
     price: "3"
   }
 ];
+let total = 0;
+const basket = [];
 
 function priceDisplay(price) {
   //   for (a = 0; a < plants.length; a++) {
@@ -54,10 +57,6 @@ function createCard(data) {
   price.classList.add("price");
   buy.classList.add("buy");
 
-  buy.addEventListener("click", function() {
-    alert("hi");
-  });
-
   name.textContent = data.name;
   description.textContent = data.description;
   image.src = data.image;
@@ -70,6 +69,14 @@ function createCard(data) {
   card.appendChild(buy);
   card.appendChild(description);
   grid.appendChild(card);
+
+  buy.addEventListener("click", function() {
+    total = total + parseFloat(data.price);
+    checkoutTitle.innerHTML = "Basket Total: £" + total;
+    basket.push(data.name);
+    itemNo = basket.length;
+    basketItems.innerHTML = itemNo;
+  });
 }
 
 function createCards() {
