@@ -54,6 +54,10 @@ function createCard(data) {
   price.classList.add("price");
   buy.classList.add("buy");
 
+  buy.addEventListener("click", function() {
+    alert("hi");
+  });
+
   name.textContent = data.name;
   description.textContent = data.description;
   image.src = data.image;
