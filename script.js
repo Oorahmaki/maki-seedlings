@@ -1,6 +1,7 @@
 const grid = document.getElementById("grid");
 const checkoutTitle = document.getElementById("checkoutTitle");
 const basketItems = document.getElementById("basketItems");
+const checkout = document.getElementById("checkout");
 const plants = [
   {
     name: "Echeveria",
@@ -86,3 +87,7 @@ function createCards() {
 }
 
 createCards();
+
+checkout.addEventListener("click", function() {
+  console.log(basket);
+});
